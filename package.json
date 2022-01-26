@@ -1,0 +1,36 @@
+{
+  "name": "projects-api",
+  "version": "1.0.0",
+  "description": "API for the projects for JWOC 2k22",
+  "author": {
+    "name": "Niloy Sikdar",
+    "email": "niloysikdar30@gmail.com",
+    "url": "https://github.com/niloysikdar"
+  },
+  "engines": {
+    "node": ">=14.x"
+  },
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jwoc-jgec/projects-api.git"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jwoc-jgec/projects-api/issues"
+  },
+  "dependencies": {
+    "dotenv": "^14.3.2",
+    "fastify": "^3.27.0",
+    "fastify-cors": "^6.0.2",
+    "mongoose": "^6.1.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
