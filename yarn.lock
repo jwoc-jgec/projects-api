@@ -400,6 +400,15 @@ fastify-plugin@^3.0.0:
   resolved "https://registry.yarnpkg.com/fastify-plugin/-/fastify-plugin-3.0.1.tgz#79e84c29f401020f38b524f59f2402103fd21ed2"
   integrity sha512-qKcDXmuZadJqdTm6vlCqioEbyewF60b/0LOFCcYN1B6BIZGlYJumWWOYs70SFYLDAH4YqdE1cxH/RKMG7rFxgA==
 
+fastify-rate-limit@^5.7.0:
+  version "5.7.0"
+  resolved "https://registry.yarnpkg.com/fastify-rate-limit/-/fastify-rate-limit-5.7.0.tgz#50a4ec3183e7b357c629e99d10260f65a0950bb3"
+  integrity sha512-9pfnVpz6rUy7VGqBVN9blIT7LgmETiK7hRA0Pu8eHJFq8qq8FBPvrQYXxGXb2nt63laD6ZuvT1O7TxucZI1HIA==
+  dependencies:
+    fastify-plugin "^3.0.0"
+    ms "^2.1.1"
+    tiny-lru "^7.0.0"
+
 fastify-warning@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/fastify-warning/-/fastify-warning-0.2.0.tgz#e717776026a4493dc9a2befa44db6d17f618008f"

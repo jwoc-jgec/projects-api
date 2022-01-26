@@ -9,6 +9,18 @@ const MONGODB_URL = process.env.MONGODB_URL;
 const PORT = process.env.PORT || 5000;
 
 fastify.register(require("fastify-cors"), {});
+fastify.register(require("fastify-rate-limit"), {
+  global: true,
+  max: 3,
+  timeWindow: 1000 * 60,
+  errorResponseBuilder: function (req, context) {
+    return {
+      code: 429,
+      error: "Too Many Requests",
+      message: `I only allow ${context.max} requests per ${context.after} to this API. Try again after ${context.ttl} ms !`,
+    };
+  },
+});
 
 const client = new MongoClient(MONGODB_URL);
 
@@ -34,7 +46,6 @@ fastify.get("/", async (req, res) => {
 });
 
 // Connect the DB and Run the server!
-
 client
   .connect()
   .then(() => startServer())
